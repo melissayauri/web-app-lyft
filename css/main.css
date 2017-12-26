@@ -1,0 +1,13 @@
+/*vista splash*/
+.splash{
+  text-align: center;
+  background: linear-gradient(650deg,#b2077b,#530060);
+  height: 200vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*logo de la vista splash*/
+img[alt="logo-white"]{
+  width: 50%;
+}
