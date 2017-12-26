@@ -55,3 +55,27 @@ img[alt="logo-pink"]{
   margin-right: 1rem;
   color:white;
 }
+
+.icon{
+  color:black;
+  font-size: 50rem;
+  outline: 1px solid red;
+}
+
+
+.cuadrado-negro{
+	width: 60%;
+	padding: 15px;
+	word-wrap: break-word;
+	white-space: pre-line;
+	background-color: black;
+	position: absolute;
+	top: 50%;
+	left: 19%;
+	text-align: center;
+	color: white;
+	opacity: 0.6;
+}
+.ocultar{
+	display: none;
+}
