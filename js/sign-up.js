@@ -1,3 +1,7 @@
+var numx = (Math.floor((Math.random() * 10) + 1)).toString();
+var numy = (Math.floor((Math.random() * 10) + 1)).toString();
+var numz = (Math.floor((Math.random() * 10) + 1)).toString();
+
 $(document).ready(function() {
   /* funcion para hacer el cambio de bandera*/
   $('#flag-mexico,#flag-venezuela,#flag-estados-unidos').click(function() {
@@ -15,12 +19,11 @@ $(document).ready(function() {
       $('#next').removeClass('btn-enabled');
     }
   });
-  /*generando la alerta con un codigo*/
+  /* generando la alerta con un codigo*/
   $('#next').click(function() {
-    var x = Math.floor((Math.random() * 10) + 1);
-    var y = Math.floor((Math.random() * 10) + 2);
-    var z = Math.floor((Math.random() * 10) + 3);
-    alert('lab-'+x+y+z);
-    $("#next").attr("href", "../views/comprobacion-codigo.html");
-});
+
+    alert('lab-' + numx + numy + numz);
+    /* redireccionando hacia el arhico verify*/
+    window.location.href = '../views/verify-phone.html';
+  });
 });

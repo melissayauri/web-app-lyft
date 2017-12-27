@@ -1,7 +1,7 @@
 *{
   margin: 0;
   padding: 0;
-  color:black;
+
 }
 .line{
   outline: 1px solid red;
@@ -73,10 +73,24 @@ img[alt="peru"],img[alt="mexico"],img[alt="venezuela"],img[alt="estados-unidos"]
 }
 .text-sign{
   margin-top: 2rem;
-  margin-bottom: 10rem;
+  margin-bottom: 25rem;
 }
 
 .btn-enabled{
   background-color: #b2077b;
   font-weight: 900;
+}
+
+/*vista verify*/
+.box-verify{
+
+width: 50%;
+}
+.code{
+  width: 10vw;
+  border:none;
+  border-bottom: 1px solid #b2077b;
+}
+.disabled-color{
+background-color: #CDCDCE;
 }
