@@ -1,6 +1,7 @@
 *{
   margin: 0;
   padding: 0;
+  color:black;
 }
 .line{
   outline: 1px solid red;
@@ -55,27 +56,27 @@ img[alt="logo-pink"]{
   margin-right: 1rem;
   color:white;
 }
-
-.icon{
-  color:black;
-  font-size: 50rem;
-  outline: 1px solid red;
+/*vista sign-up*/
+/*menú*/
+.sign-up{
+    background: linear-gradient(650deg,#b2077b,#530060);
+    color:white;
+}
+.return{
+color:#b2077b;
+font-size: 4rem;
 }
 
-
-.cuadrado-negro{
-	width: 60%;
-	padding: 15px;
-	word-wrap: break-word;
-	white-space: pre-line;
-	background-color: black;
-	position: absolute;
-	top: 50%;
-	left: 19%;
-	text-align: center;
-	color: white;
-	opacity: 0.6;
+img[alt="peru"],img[alt="mexico"],img[alt="venezuela"],img[alt="estados-unidos"] {
+  width: 4vw;
+  height: 4vh;
 }
-.ocultar{
-	display: none;
+.text-sign{
+  margin-top: 2rem;
+  margin-bottom: 10rem;
+}
+
+.btn-enabled{
+  background-color: #b2077b;
+  font-weight: 900;
 }

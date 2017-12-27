@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="../css/main.css">
   </head>
   <!--menú sign up-->
-  <nav class="navbar navbar-default navbar-registro">
+  <nav class="navbar navbar-default sign-up">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand btn-volver" href="../index.html"><i class="glyphicon glyphicon-menu-left"></i></a>
-        <h3 class="text-center ">Sign up</h3>
+        <a class="navbar-brand" href="../index.html"><i class="glyphicon glyphicon-chevron-left return"></i></a>
+        <h2 class="text-center ">Sign up</h2>
         <p class="text-center ">Join now for free ride credit</p>
       </div>
     </div>
@@ -21,32 +21,36 @@
   <!--formulario-->
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-12 ">
-        <form class="">
+      <div class="col-xs-12">
+        <div class="input-group">
+          <div class="input-group-btn">
+            <!--botón despegable de las banderas-->
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/peru.png" alt="peru" id="flag"><span class="caret"></span></button>
+            <!--codigo antes del numero de celular-->
+            <button type="button" class="btn btn-default" id="#postal">51</button>
+            <!--menu despegable de banderas-->
+            <ul class="dropdown-menu">
+              <li><a href="#"><img src="../assets/images/mexico.png" alt="mexico" id="flag-mexico"></a></li>
+              <li><a href="#"><img src="../assets/images/venezuela.png" alt="venezuela" id="flag-venezuela"></a></li>
+              <li><a href="#"><img src="../assets/images/estados-unidos.png" alt="estados-unidos" id="flag-estados-unidos"></a></li>
+            </ul>
+          </div>
+          <!--entrada para el número de celular-->
+          <input type="text" class="form-control" maxlength="10" placeholder="954215850" id="number-phone">
+        </div>
+        <p class="text-center text-sign">We'll send a text to verify your phone </p>
+        <!--botón next-->
+        <button type="button" class="btn btn-default btn-lg btn-block text-uppercase" disabled id="next" href="">next</button>
+        <div class="hide alert bg-danger text-center" id="alert"></div>
+      </div>
+    </div>
+  </div>
 
-        </form>
-  					<div class="input-group">
-  						<div class="input-group-btn">
-  							<button type="button" class="btn btn-default dropdown-toggle subir-capa" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/bandera.png"> <span class="caret"></span></button>
-  							<button type="button" class="btn btn-default subir-capa" id="cincuenta-y-uno">+51</button>
-  							<ul class="dropdown-menu">
-  								<li><a href="#">EEUU</a></li>
-  								<li><a href="#">Spain</a></li>
-  								<li><a href="#">England</a></li>
-  							</ul>
-  						</div><!-- /btn-group -->
-  						<input id="input-celular" type="tel" class="form-control" maxlength="9" placeholder="123456789">
-  					</div><!-- /input-group -->
-  				</div><!-- /.col-lg-6 -->
-  			</div><!-- /.row -->
-  			<div class="ocultar cuadrado-negro" id="cuadrado-negro"></div>
-  			<a id="obtener-codigo"><button class="btn btn-default btn-lg btn-siguiente">Next</button></a>
-  		</div>
 
     <!--vinculando con el archivo jquery-->
     <script type="text/javascript" src="../vendors/js/jquery-3.2.1.min.js"></script>
     <!--vinculando con el framework bootstrap-js-->
     <script type="text/javascript" src="../vendors/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../js/app.js"></script>
+    <script type="text/javascript" src="../js/sign-up.js"></script>
   </body>
 </html>
