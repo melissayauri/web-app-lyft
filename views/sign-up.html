@@ -22,35 +22,77 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-xs-12">
-        <div class="input-group">
-          <div class="input-group-btn">
+          <div class="input-group">
+            <div class="input-group-btn">
             <!--botón despegable de las banderas-->
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/peru.png" alt="peru" id="flag"><span class="caret"></span></button>
-            <!--codigo antes del numero de celular-->
-            <button type="button" class="btn btn-default" id="#postal">51</button>
+            <button type="button" class="btn btn-default dropdown-toggle btn-flag" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/peru.png" alt="peru" id="flag"><span class="caret"></span></button>
             <!--menu despegable de banderas-->
             <ul class="dropdown-menu">
-              <li><a href="#"><img src="../assets/images/mexico.png" alt="mexico" id="flag-mexico"></a></li>
-              <li><a href="#"><img src="../assets/images/venezuela.png" alt="venezuela" id="flag-venezuela"></a></li>
-              <li><a href="#"><img src="../assets/images/estados-unidos.png" alt="estados-unidos" id="flag-estados-unidos"></a></li>
+              <li><a href="#mexico" data-toggle="modal" ><img src="../assets/images/mexico.png" alt="mexico" id="flag-mexico"></a></li>
+              <li><a href="#venezuela" data-toggle="modal"><img src="../assets/images/venezuela.png" alt="venezuela" id="flag-venezuela"></a></li>
+              <li><a href="#estados-unidos" data-toggle="modal"><img src="../assets/images/estados-unidos.png" alt="estados-unidos" id="flag-estados-unidos"></a></li>
             </ul>
           </div>
+          <!--modal para indicar el codigo postal-méxico-->
+          <div class="modal fade" id ="mexico">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header content-modal">
+                  <!--botón para cerrar-->
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <p class="text-center">Selecciona el codigo postal 1160</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--modal para indicar el codigo postal-venezuela-->
+          <div class="modal fade" id ="venezuela">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header content-modal">
+                  <!--botón para cerrar-->
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <p class="text-center">Selecciona el codigo postal 06880</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--modal para indicar el codigo postal-estados unidos-->
+          <div class="modal fade" id ="estados-unidos">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header content-modal">
+                  <!--botón para cerrar-->
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <p class="text-center">Selecciona el codigo postal 34038</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--menú para el codigo postal-->
+          <div class="code-postal">
+            <select class="form-control">
+              <option>51</option>
+              <option>1160</option>
+              <option>06880</option>
+              <option>34038</option>
+            </select>
+          </div>
           <!--entrada para el número de celular-->
-          <input type="text" class="form-control" maxlength="10" placeholder="954215850" id="number-phone">
+          <div class="number-phone">
+            <input type="text" class="form-control " maxlength="9" placeholder="954215850" id="number-phone">
+          </div>
         </div>
         <p class="text-center text-sign">We'll send a text to verify your phone </p>
         <!--botón next-->
         <button type="button" class="btn btn-default btn-lg btn-block text-uppercase" disabled id="next" >next</button>
-        <div class="hide alert bg-danger text-center" id="alert"></div>
       </div>
     </div>
   </div>
-
-
-    <!--vinculando con el archivo jquery-->
-    <script type="text/javascript" src="../vendors/js/jquery-3.2.1.min.js"></script>
-    <!--vinculando con el framework bootstrap-js-->
-    <script type="text/javascript" src="../vendors/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../js/sign-up.js"></script>
-  </body>
+  <!--vinculando con el archivo jquery-->
+  <script type="text/javascript" src="../vendors/js/jquery-3.2.1.min.js"></script>
+  <!--vinculando con el framework bootstrap-js-->
+  <script type="text/javascript" src="../vendors/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../js/sign-up.js"></script>
+</body>
 </html>

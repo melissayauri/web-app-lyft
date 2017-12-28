@@ -66,10 +66,15 @@ img[alt="logo-pink"]{
 color:#b2077b;
 font-size: 4rem;
 }
-
+/*boton de las banderas*/
+.btn-flag{
+margin-bottom: 5px;
+}
+/*imagenes de banderas*/
 img[alt="peru"],img[alt="mexico"],img[alt="venezuela"],img[alt="estados-unidos"] {
   width: 4vw;
   height: 4vh;
+
 }
 .text-sign{
   margin-top: 2rem;
@@ -80,6 +85,23 @@ img[alt="peru"],img[alt="mexico"],img[alt="venezuela"],img[alt="estados-unidos"]
   background-color: #b2077b;
   font-weight: 900;
 }
+/*codigo postal*/
+.code-postal{
+  width: 30%;
+}
+/*entrada para el numero de telefono*/
+.number-phone{
+  display: inline-block;
+}
+/*mensaje para el codigo postal*/
+.content-modal{
+  background: linear-gradient(650deg,#b2077b,#530060);
+  color:white;
+	opacity: 0.8;
+}
+
+
+
 
 /*vista verify*/
 .box-verify{
