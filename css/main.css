@@ -61,6 +61,9 @@ img[alt="logo-pink"]{
 }
 /*vista sign-up*/
 /*menú*/
+.title-sign{
+  margin-left: 18rem;
+}
 .sign-up{
   background: linear-gradient(650deg,#b2077b,#530060);
   color:white;
@@ -122,7 +125,7 @@ img[alt="peru"],img[alt="mexico"],img[alt="venezuela"],img[alt="estados-unidos"]
 }
 
 .title-verify{
-  margin-left: 12rem;
+  margin-left: 9rem;
 }
 
 .text-verify{
@@ -136,4 +139,28 @@ img[alt="peru"],img[alt="mexico"],img[alt="venezuela"],img[alt="estados-unidos"]
   margin-bottom: 15rem;
   background-color: #a3218e;
   color: white;
+}
+
+/*vista para el formulario*/
+.input-formul{
+  width: 40vw;
+  display: inline-block;
+}
+.input-formul1{
+  width: 80vw;
+  display: inline-block;
+}
+
+.btn-icon{
+  width: 10vw;
+  display: inline-block;
+  margin-bottom: 4rem;
+  background-color: #bd7cb4;
+  margin-top:15px;
+  padding-bottom: 10px;
+}
+
+.check{
+  width: 60%;
+  margin-bottom: 15rem;
 }
