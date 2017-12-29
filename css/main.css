@@ -3,6 +3,9 @@
   padding: 0;
 
 }
+body{
+  background-color:#fff6f4;
+}
 .line{
   outline: 1px solid red;
 }
@@ -59,16 +62,17 @@ img[alt="logo-pink"]{
 /*vista sign-up*/
 /*menú*/
 .sign-up{
-    background: linear-gradient(650deg,#b2077b,#530060);
-    color:white;
+  background: linear-gradient(650deg,#b2077b,#530060);
+  color:white;
 }
 .return{
-color:#b2077b;
-font-size: 4rem;
+  color:#b2077b;
+  font-size: 4rem;
 }
 /*boton de las banderas*/
 .btn-flag{
-margin-bottom: 5px;
+  margin-bottom: 5px;
+  margin-left: 2rem;
 }
 /*imagenes de banderas*/
 img[alt="peru"],img[alt="mexico"],img[alt="venezuela"],img[alt="estados-unidos"] {
@@ -84,6 +88,7 @@ img[alt="peru"],img[alt="mexico"],img[alt="venezuela"],img[alt="estados-unidos"]
 .btn-enabled{
   background-color: #b2077b;
   font-weight: 900;
+  color:white;
 }
 /*codigo postal*/
 .code-postal{
@@ -105,14 +110,30 @@ img[alt="peru"],img[alt="mexico"],img[alt="venezuela"],img[alt="estados-unidos"]
 
 /*vista verify*/
 .box-verify{
-
-width: 50%;
+  width: 50%;
 }
 .code{
   width: 10vw;
   border:none;
-  border-bottom: 1px solid #b2077b;
+  border-bottom: 4px solid #b2077b;
 }
 .disabled-color{
-background-color: #CDCDCE;
+  background-color: #CDCDCE;
+}
+
+.title-verify{
+  margin-left: 12rem;
+}
+
+.text-verify{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  margin-left: 2rem;
+}
+/*botón resent*/
+.btn-resent{
+  margin-left: 16rem;
+  margin-bottom: 15rem;
+  background-color: #a3218e;
+  color: white;
 }

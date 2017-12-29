@@ -1,4 +1,4 @@
-/*numero aleatorios*/
+/* numero aleatorios desde 1 al 9*/
 var numx = Math.floor((Math.random() * 9) + 1);
 var numy = Math.floor((Math.random() * 9) + 1);
 var numz = Math.floor((Math.random() * 9) + 1);
