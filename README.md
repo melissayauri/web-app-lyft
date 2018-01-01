@@ -3,6 +3,13 @@
 ## Objetivo
 Desarrollar una web-app que replique el sitio de Lyft
 
+## Herramientas
+
+* HTML
+* CSS
+* Framework bootstrap
+* Jquery
+
 ## Flujo de la aplicación
 1. Vista splash: Esta vista estás disponible por 4 segundos
 
@@ -35,3 +42,7 @@ Luego de que se introduzca el n° telefonico, el botón next se habilita y te br
 6. Vista-final: Es la vista donde indica que todo se concluyo exitosamente
 
 ![splash](assets/images/vista-final.JPG)
+
+## Fuentes
+
+* [expresiones regulares jquery](https://www.solvetic.com/tutoriales/article/1473-expresiones-regulares-con-jquery/)
