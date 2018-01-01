@@ -18,51 +18,53 @@
         </div>
       </div>
     </nav>
+    <!--sección del formulario-->
     <section>
       <div class="container-fluid">
         <div class="row">
           <div class="col-xs-12">
             <form class="form">
-      <div class="row">
-        <div class="col-xs-6 padding-right">
-          <div class="form-group">
-            <div class="input-group">
-
-              <div class="input-group-addon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></div>
-              <input type="text" class="form-control" id="first-name" placeholder="First name" required>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-6 padding-left">
-          <div class="form-group">
-
-            <input type="text" class="form-control" id="last-name" placeholder="Last name" required>
-          </div>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="input-group">
-
-          <div class="input-group-addon"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></div>
-          <input type="email" class="form-control" id="email" placeholder="Email" required>
-        </div>
-      </div>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" id="check"> I agree to Lyft'ss <span class="blue">Terms of Service</span>
-        </label>
-      </div>
-      <button type="submit" class="btn btn-default btn-lg btn-block margin-button enabled-color" id="submit" >NEXT</button>
-    </form>
+              <div class="row">
+                <!--entrada para el nombre-->
+                <div class="col-xs-6">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-addon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></div>
+                      <input type="text" class="form-control" id="first-name" placeholder="First name" required>
+                    </div>
+                  </div>
+                </div>
+                <!--entrada para el apellido-->
+                <div class="col-xs-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="last-name"  placeholder="Last name" required>
+                  </div>
+                </div>
               </div>
-            </div>
+              <!--entrada para el correo-->
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-addon"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></div>
+                  <input type="email" class="form-control" id="email" placeholder="Email" required>
+                </div>
+                </div>
+                <!--sección del check-->
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" id="check"> I agree to Lyft'ss <span class="text-primary">Terms of Service</span>
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-default btn-lg btn-block" disabled="disabled" id="next-final"  >NEXT</button>
+              </form>
           </div>
-        </section>
-
-  <!--vinculando con el archivo jquery-->
-  <script type="text/javascript" src="../vendors/js/jquery-3.2.1.min.js"></script>
-  <!--vinculando con el framework bootstrap-js-->
-  <script type="text/javascript" src="../vendors/bootstrap/js/bootstrap.min.js"></script>
+        </div>
+      </div>
+    </section>
+    <!--vinculando con el archivo jquery-->
+    <script type="text/javascript" src="../vendors/js/jquery-3.2.1.min.js"></script>
+    <!--vinculando con el framework bootstrap-js-->
+    <script type="text/javascript" src="../vendors/bootstrap/js/bootstrap.min.js"></script>
+    <!--vinculando con el archivo formul-->
     <script type="text/javascript" src="../js/formul.js"></script>
   </body>
 </html>
