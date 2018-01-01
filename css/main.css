@@ -19,10 +19,9 @@ a{
 .splash{
   text-align: center;
   background: linear-gradient(650deg,#b2077b,#530060);
-  height: 150vh;
+  height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
   z-index: 1000;
   position: fixed;
   top: 0;
@@ -105,11 +104,10 @@ img[alt="peru"],img[alt="mexico"],img[alt="venezuela"],img[alt="estados-unidos"]
 .content-modal{
   background: linear-gradient(650deg,#b2077b,#530060);
   color:white;
-	opacity: 0.8;
+  width: 50%;
+  margin-left: 30%;;
+  margin-top: 20%;
 }
-
-
-
 
 /*vista verify*/
 .box-verify{
@@ -142,44 +140,85 @@ img[alt="peru"],img[alt="mexico"],img[alt="venezuela"],img[alt="estados-unidos"]
 }
 
 /*vista para el formulario*/
-.input-formul{
-  width: 40vw;
-  display: inline-block;
-}
-.input-formul1{
-  width: 80vw;
-  display: inline-block;
-}
-
-.btn-icon{
-  width: 10vw;
-  display: inline-block;
-  margin-bottom: 4rem;
-  background-color: #bd7cb4;
-  margin-top:15px;
-  padding-bottom: 10px;
-}
-
 .check{
   width: 60%;
   margin-bottom: 15rem;
 }
 
-/*final*/
+/* vista final*/
 .end{
-    background: linear-gradient(650deg,#b2077b,#530060);
-    height: 100vh;
+  background: linear-gradient(650deg,#b2077b,#530060);
+  height: 100vh;
 }
 
+/* imagen del logo blanco lyft*/
 img[alt="logo-final"]{
   width: 50vw;
   margin-top: 5rem;
   margin-bottom: 5rem;
-
 }
+
 .flex1{
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+}
+
+@media (min-width: 992px){
+  .btn-start{
+    padding: 4rem;
+    margin-right: 3rem;
+  }
+  .btn-resent{
+  margin-left: 35rem;
+  }
+  .title-sign{
+    margin-left: 35rem;
+  }
+  .center{
+    margin-left: 32rem;
+  }
+  .code-postal{
+    width: 50%;
+  }
+  /*entrada para el numero de telefono*/
+  .number-phone{
+    width: 50%;
+  }
+  .title-verify{
+    margin-left: 30rem;
+  }
+  .text-verify{
+    margin-left: 8rem;
+  }
+  .check{
+    width: 35%;
+  }
+}
+
+
+@media (min-width: 1200px){
+  img[alt="logo-pink"]{
+    width: 80vw;
+  }
+  .splash{
+    width: 150vw;
+  }
+  .title-sign{
+    margin-left: 45rem;
+  }
+  .center{
+    margin-left: 40rem;
+  }
+  .btn-resent{
+    margin-left: 50rem;
+  }
+
+  .title-verify{
+    margin-left: 40rem;
+  }
+  .text-verify{
+    margin-left: 14rem;
+  }
 }
