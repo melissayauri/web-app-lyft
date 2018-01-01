@@ -1,5 +1,78 @@
 $(document).ready(function() {
-  /* funcion para el numero aleatorio del 0 al 9*/
+  /* validación con el código de la vista sign-up*/
+  /* cada entrada del codigo comienzan en estado falso*/
+  var $stateRandom1 = false;
+  var $stateRandom2 = false;
+  var $stateRandom3 = false;
+  /* validando la primera entrada de codigo*/
+  $('#input1').keyup(function() {
+  /* evaluando al primer código*/
+    if ($(this).val() === localStorage.random1) {
+      console.log('correct number1');
+      /* si el valor coincide con el de la vista anterior es verdadero*/
+      $stateRandom1 = true;
+    } else {
+      $stateRandom1 = false;
+    }
+    /* evaluando todos los estados de los código para habilitar el btn next*/
+    if ($stateRandom1 === true && $stateRandom2 === true && $stateRandom3 === true) {
+      /* el btn se encuentra desabilitado y se quita ese atributo*/
+      $('#next2').removeAttr('disabled');
+      /* se añade la clase para que cambie de color hablitando el btn*/
+      $('#next2').addClass('btn-enabled');
+    } else {
+      /* si en caso los estados no son verdaderos el btn permanece desabilitado*/
+      $('#next2').attr('disabled', 'disabled');
+      /* se le remueve el color del btn habilitado*/
+      $('#next2').removeClass('btn-enabled');
+    }
+  });
+  /* evaluando al segundo código*/
+  $('#input2').keyup(function() {
+    if ($(this).val() === localStorage.random2) {
+      /* si el valor coincide con el de la vista anterior es verdadero*/
+      console.log('correct number2');
+      $stateRandom2 = true;
+    } else {
+      $stateRandom2 = false;
+    }
+    /* evaluando todos los estados de los código para habilitar el btn next*/
+    if ($stateRandom1 === true && $stateRandom2 === true && $stateRandom3 === true) {
+      /* el btn se encuentra desabilitado y se quita ese atributo*/
+      $('#next2').removeAttr('disabled');
+      /* se añade la clase para que cambie de color hablitando el btn*/
+      $('#next2').addClass('btn-enabled');
+    } else {
+      /* si en caso los estados no son verdaderos el btn permanece desabilitado*/
+      $('#next2').attr('disabled', 'disabled');
+      /* se le remueve el color del btn habilitado*/
+      $('#next2').removeClass('btn-enabled');
+    }
+  });
+  /* evaluando al tercer código*/
+  $('#input3').keyup(function() {
+    if ($(this).val() === localStorage.random3) {
+      /* si el valor coincide con el de la vista anterior es verdadero*/
+      console.log('correct number3');
+      $stateRandom3 = true;
+    } else {
+      $stateRandom3 = false;
+    }
+    if ($stateRandom1 === true && $stateRandom2 === true && $stateRandom3 === true) {
+      /* el btn se encuentra desabilitado y se quita ese atributo*/
+      $('#next2').removeAttr('disabled');
+      /* se añade la clase para que cambie de color hablitando el btn*/
+      $('#next2').addClass('btn-enabled');
+    } else {
+      /* si en caso los estados no son verdaderos el btn permanece desabilitado*/
+      $('#next2').attr('disabled', 'disabled');
+      /* se le remueve el color del btn habilitado*/
+      $('#next2').removeClass('btn-enabled');
+    }
+  });
+
+  /* analizando el nuevo codigo generado por en tbn resent*/
+  /* otra forma para le n° aleatorio-funcion para el numero aleatorio del 0 al 9*/
   function numberRandom() {
     var $firstnum = (Math.floor(Math.random() * 10)).toString();
     console.log($firstnum);
@@ -25,8 +98,9 @@ $(document).ready(function() {
     var $stateNum1 = false;
     var $stateNum2 = false;
     var $stateNum3 = false;
+    /* se procede a evaluar solo el codigo que genera el boton resent*/
     /* evaluando cada entrada de codigo si es igual al alert*/
-    $('#cod1').keyup(function() {
+    $('#input1').keyup(function() {
       /* evaluando al primer item del código*/
       if ($(this).val() === $num1) {
         console.log('correct number1');
@@ -44,7 +118,7 @@ $(document).ready(function() {
       }
     });
     /* evaluando al segundo item del código*/
-    $('#cod2').keyup(function() {
+    $('#input2').keyup(function() {
       if ($(this).val() === $num2) {
         console.log('correct number2');
         $stateNum2 = true;
@@ -61,9 +135,9 @@ $(document).ready(function() {
       }
     });
     /* evaluando al tercer item del código*/
-    $('#cod3').keyup(function() {
+    $('#input3').keyup(function() {
       if ($(this).val() === $num3) {
-        console.log('sii3');
+        console.log('correct number3');
         $stateNum3 = true;
       } else {
         $stateNum3 = false;
