@@ -12,7 +12,7 @@ $(document).ready(function() {
     }
   });
   /* validando la entrada del correo */
-  $('#email').focusout(function() {
+  $('#email').blur(function() {
     var $inputEmail = $(this).val();
     /* expresión para validar el @ del correo*/
     var $expresion2 = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
