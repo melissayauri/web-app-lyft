@@ -5,9 +5,12 @@ $(document).ready(function() {
   var $stateRandom2 = false;
   var $stateRandom3 = false;
   /* validando la primera entrada de codigo*/
+
   $('#input1').keyup(function() {
-  /* evaluando al primer código*/
-    if ($(this).val() === localStorage.random1) {
+    /* obteniendo el primer n° aleatorio de la pestaña anterior*/
+    var $rand1 = localStorage.getItem('random1');
+    /* evaluando al primer código*/
+    if ($(this).val() === $rand1) {
       console.log('correct number1');
       /* si el valor coincide con el de la vista anterior es verdadero*/
       $stateRandom1 = true;
@@ -27,9 +30,12 @@ $(document).ready(function() {
       $('#next2').removeClass('btn-enabled');
     }
   });
+
   /* evaluando al segundo código*/
   $('#input2').keyup(function() {
-    if ($(this).val() === localStorage.random2) {
+    /* obteniendo el segundo n° aleatorio de la pestaña anterior*/
+    var $rand2 = localStorage.getItem('random2');
+    if ($(this).val() === $rand2) {
       /* si el valor coincide con el de la vista anterior es verdadero*/
       console.log('correct number2');
       $stateRandom2 = true;
@@ -51,7 +57,9 @@ $(document).ready(function() {
   });
   /* evaluando al tercer código*/
   $('#input3').keyup(function() {
-    if ($(this).val() === localStorage.random3) {
+    /* obteniendo el tercer n° aleatorio de la pestaña anterior*/
+    var $rand3 = localStorage.getItem('random3');
+    if ($(this).val() === $rand3) {
       /* si el valor coincide con el de la vista anterior es verdadero*/
       console.log('correct number3');
       $stateRandom3 = true;
@@ -91,9 +99,9 @@ $(document).ready(function() {
     /* incorporando el alert*/
     alert('LAB - ' + $newCode);
     /* desglosando cada item del nuevo codigo*/
-    var $num1 = (parseInt($newCode[0])).toString();
-    var $num2 = (parseInt($newCode[1])).toString();
-    var $num3 = (parseInt($newCode[2])).toString();
+    var $num1 = ($newCode[0]).toString();
+    var $num2 = ($newCode[1]).toString();
+    var $num3 = ($newCode[2]).toString();
     /* variables para definir el estado de cada código*/
     var $stateNum1 = false;
     var $stateNum2 = false;

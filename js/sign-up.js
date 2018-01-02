@@ -27,10 +27,11 @@ $(document).ready(function() {
   /* generando la alerta con un codigo*/
   $('#next').click(function() {
     alert('lab-' + numx + numy + numz);
-    /* guardando el codigo para llamarlos en la otra vista*/
-    localStorage.random1 = numx;
-    localStorage.random2 = numy;
-    localStorage.random3 = numz;
+    /* guardando los codigos aleatorios para llamarlos en la otra vista*/
+    localStorage.setItem('random1', numx) ;
+    localStorage.setItem('random2', numy);
+    localStorage.setItem('random3', numz);
+
     /* redireccionando hacia el arhico verify*/
     window.location.href = '../views/verify-phone.html';
   });
