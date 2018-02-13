@@ -1,18 +1,23 @@
 /* numero aleatorios desde 1 al 9*/
-var numx = Math.floor((Math.random() * 9) + 1);
-var numy = Math.floor((Math.random() * 9) + 1);
-var numz = Math.floor((Math.random() * 9) + 1);
-/* #flag-venezuela,#flag-estados-unidos'*/
+
+
 $(document).ready(function() {
-  /* funcion para hacer el cambio de bandera*/
-  $('#flag-mexico,#flag-venezuela,#flag-estados-unidos').click(function() {
-    var location = $(this).attr('src');
-    /* se le asigna la nueva ubicacion de las banderas*/
-    $('#flag').attr('src', location);
+  /* evento para seleccionar la bandera según el país*/
+  $('img').click(function() {
+    $('#text').addClass('block');
+    /* guardando la ruta de la imágenes de banderas*/
+    var flags = $(this).attr('src');
+    /* asignandole el atributo de la ruta*/
+    $('#flag').attr('src', flags);
+    /* obteniendo el atributo personalizado al código postal*/
+    var postalCode = ($(this).data('postal-code'));
+    /* asignando el código postal*/
+    $('#postal-code').text(postalCode);
   });
 
+
   /* funcion para validar el numero de celular e inabilitar el boton next*/
-  $('#number-phone').keyup(function() {
+  $('#phone-number').keyup(function() {
     /* evalua que el numero de celular es de 9 digitos*/
     if (($(this).val().length) === 9) {
       /* se habilita el boton, removiendo el atributo desabilitado*/
@@ -24,7 +29,12 @@ $(document).ready(function() {
       $('#next').removeClass('btn-enabled');
     }
   });
-  /* generando la alerta con un codigo*/
+
+  /* generando la alerta con un codigo random*/
+  var numx = Math.floor((Math.random() * 9) + 1);
+  var numy = Math.floor((Math.random() * 9) + 1);
+  var numz = Math.floor((Math.random() * 9) + 1);
+
   $('#next').click(function() {
     alert('lab-' + numx + numy + numz);
     /* guardando los codigos aleatorios para llamarlos en la otra vista*/

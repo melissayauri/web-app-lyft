@@ -71,17 +71,19 @@ img[alt="logo-pink"]{
   color:#b2077b;
   font-size: 4rem;
 }
+img[alt="flag"]{
+  width: 30px;
+
+}
 /*boton de las banderas*/
 .btn-flag{
   margin-bottom: 5px;
   margin-left: 2rem;
 }
-/*imagenes de banderas*/
-img[alt="peru"],img[alt="mexico"],img[alt="venezuela"],img[alt="estados-unidos"] {
-  width: 4vw;
-  height: 4vh;
-
+.block{
+  display: none;
 }
+
 .text-sign{
   margin-top: 2rem;
   margin-bottom: 25rem;
@@ -171,7 +173,7 @@ img[alt="logo-final"]{
     margin-right: 3rem;
   }
   .btn-resent{
-  margin-left: 35rem;
+  margin-left: 32rem;
   }
   .title-sign{
     margin-left: 35rem;
@@ -206,13 +208,13 @@ img[alt="logo-final"]{
     width: 150vw;
   }
   .title-sign{
-    margin-left: 45rem;
+    margin-left: 60rem;
   }
   .center{
-    margin-left: 40rem;
+    margin-left: 56rem;
   }
   .btn-resent{
-    margin-left: 50rem;
+    margin-left: 45rem;
   }
 
   .title-verify{
