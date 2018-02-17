@@ -1,8 +1,9 @@
 *{
   margin: 0;
   padding: 0;
-
+  box-sizing: border-box;
 }
+
 body{
   background-color:#fff6f4;
 }
@@ -17,47 +18,62 @@ a{
 }
 /*vista splash*/
 .splash{
-  text-align: center;
-  background: linear-gradient(650deg,#b2077b,#530060);
+  background: radial-gradient(circle,#b2077b,#530060);
+  width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   z-index: 1000;
   position: fixed;
   top: 0;
   left:0;
 }
-/*logo de la vista splash*/
-img[alt="logo-white"]{
-  width: 50%;
+/* efecto fadein al logo white*/
+@keyframes fadein {
+  from {opacity: 1;}
+  to {opacity: 0.3;}
 }
 
+img[alt="logo-white"]{
+  animation: fadein 1.5s;
+  animation-iteration-count: infinite;
+}
 /*vista inicio*/
 .start{
-  background-image: url(../assets/images/car.jpg);
-  background-size:cover;
+  background-image: url(../assets/images/traffic.gif);
   background-repeat: no-repeat;
-  height: 150vh;
-
+  background-position: top;
+  background-size: cover;
+  height: 100vh;
 }
 .flex{
   display: flex;
   justify-content: center;
   align-items: center;
 }
+img[alt="logo" ]{
+  height: 10vh;
+  width: 90vw;
+}
+
 /*logo pink*/
 img[alt="logo-pink"]{
-  height: 40vh;
-  width: 100vw;
-  margin-top: 20rem;
-  margin-bottom: 10rem;
+  height: 80vh;
+  width: 90vw;
 }
+.flex-button{
+  display: flex;
+  justify-content: center;
+}
+/* fin de la vista*/
 .btn-start{
-  background-color: transparent;
-  padding: 2rem;
-  margin-right: 1rem;
+  background-color: #e40b8d;
+  margin-right: 2rem;
   color:white;
+  padding: 2rem 3rem 1rem 3rem;
 }
+
 /*vista sign-up*/
 /*menú*/
 .title-sign{
@@ -168,10 +184,17 @@ img[alt="logo-final"]{
 }
 
 @media (min-width: 992px){
-  .btn-start{
-    padding: 4rem;
-    margin-right: 3rem;
+  /* vista inicio*/
+  .start{
+    background-position: center;
   }
+  img[alt="logo-pink"]{
+    height: 80vh;
+  }
+  .btn-start{
+    margin-right: 6rem;
+  }
+
   .btn-resent{
   margin-left: 32rem;
   }
@@ -199,14 +222,13 @@ img[alt="logo-final"]{
   }
 }
 
-
+/*
 @media (min-width: 1200px){
   img[alt="logo-pink"]{
-    width: 80vw;
+    width: 20vw;
+    outline: 1px solid red;
   }
-  .splash{
-    width: 150vw;
-  }
+
   .title-sign{
     margin-left: 60rem;
   }
@@ -224,3 +246,4 @@ img[alt="logo-final"]{
     margin-left: 14rem;
   }
 }
+*/
