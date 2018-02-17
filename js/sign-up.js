@@ -1,6 +1,3 @@
-/* numero aleatorios desde 1 al 9*/
-
-
 $(document).ready(function() {
   /* evento para seleccionar la bandera según el país*/
   $('img').click(function() {
@@ -16,10 +13,11 @@ $(document).ready(function() {
   });
 
 
-  /* funcion para validar el numero de celular e inabilitar el boton next*/
+  /* función para validar el número de celular e inhabilitar el boton next*/
   $('#phone-number').keyup(function() {
-    /* evalua que el numero de celular es de 9 digitos*/
-    if (($(this).val().length) === 9) {
+    var restriction = /^[0-9]*$/;
+    /* evalua que el número de celular es de 9 digitos y es un número*/
+    if (($(this).val().length) === 9 && restriction.test($(this).val())) {
       /* se habilita el boton, removiendo el atributo desabilitado*/
       $('#next').removeAttr('disabled');
       /*  se añade la clase para habilitar el btn cambiandolo de color*/
@@ -30,78 +28,58 @@ $(document).ready(function() {
     }
   });
 
-  /* generando la alerta con un codigo random*/
-  /*
-  var numx = Math.floor((Math.random() * 9) + 1);
-  var numy = Math.floor((Math.random() * 9) + 1);
-  var numz = Math.floor((Math.random() * 9) + 1);
-*/
-var randomNumber = (function() {
-  var code = " ";
-
-  var str = "1234567890";
-  for (var i = 0; i < 3; i++) {
-    code += str.charAt(Math.floor(Math.random() * str.length));
-  }
-  return code;
-});
+  /* Función para generar el número random de tres dígitos*/
+  var randomNumber = (function() {
+    var code = ' ';
+    var string = '1234567890';
+    for (var i = 0; i < 3; i++) {
+      code += string.charAt(Math.floor(Math.random() * string.length));
+    }
+    return code;
+  });
+  /* Evento para generar el primer código random en la vista sign up*/
   $('#next').click(function() {
+    /* variable que guarda el primer código random*/
     var codeRandom = randomNumber();
     alert('lab-' + codeRandom);
-    /* guardando los codigos aleatorios para llamarlos en la otra vista*/
-
-    /*
-    localStorage.setItem('random1', numx) ;
-    localStorage.setItem('random2', numy);
-    localStorage.setItem('random3', numz);
-*/localStorage.setItem('random', codeRandom) ;
+    /* guardando el código random en el localstorage*/
+    localStorage.setItem('random', codeRandom) ;
     /* redireccionando hacia el arhico verify*/
     window.location.href = '../views/verify-phone.html';
   });
 
+  /* variable que guarda el segundo código random*/
   var newCode = randomNumber();
-
+  /* evento que genera el segundo código random*/
   $('#button-resend').click(function() {
     alert('lab-' + newCode);
-    console.log(newCode)
+    console.log(newCode);
   });
-  /*
+
+  /* Validando si el ingreso del código es igual al que se brindo*/
   $('#input1').keyup(function() {
-
-    var input = $(this).val();
-      if (input.length == 3) {
-        $('#next2').removeClass("disabled");
-      /* se añade la clase para que cambie de color hablitando el btn*/
-  /*  }
-    else{
-      $('#next2').addClass("disabled");
-      /* se le remueve el color del btn habilitado*/
-
-
-  $('#input1').keyup(function() {
+    /* obteniendo el primer código random*/
     var random1 = window.localStorage.getItem('random');
-    console.log(random1)
-    var hh = parseInt(random1);
-    var bumber = parseInt(newCode);
-    console.log(hh)
-  /*  window.location.href = '../views/formul.html';*/
-  var verifyInput = $("#input1").val();
-  var ggg = parseInt(verifyInput)
-  console.log(verifyInput)
-      /*  if ( verifyInput == newCode) {
-          console.log(newCode)
-alert('es correcto')
-}*/
-        if ( ggg  === hh || ggg=== bumber) {
-            $('#next2').removeClass("disabled");
-
-            alert('correcto')
-        }
-        else{
-          console.log('incorrecto')
-          $('#next2').addClass("disabled");
-
-        }
+    /* console.log(random1);*/
+    /* Convirtiendo a número los códigos random*/
+    var numberRandom1 = parseInt(random1);
+    var numberNewcode = parseInt(newCode);
+    console.log(numberRandom1);
+    console.log(numberNewcode);
+    /* ingreso del código*/
+    var verifyInput = $('#input1').val();
+    /* convirtiendo a número*/
+    var numberVerify = parseInt(verifyInput);
+    console.log(verifyInput);
+    /* Validando que el ingreso sea igual al código random brindado*/
+    if (numberVerify === numberRandom1 || numberVerify === numberNewcode) {
+      $('#next2').removeClass('disabled');
+      $('#next2').addClass('btn-enabled');
+      console.log('correcto');
+    } else {
+      console.log('incorrecto');
+      $('#next2').addClass('disabled');
+    }
   });
   $('#next2').click(function() {
     window.location.href = '../views/formul.html';

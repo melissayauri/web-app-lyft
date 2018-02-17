@@ -36,10 +36,6 @@ $(document).ready(function() {
 
   /* redireccionamiento a la vista end, previamente validando campos*/
   $('#next-final').click(function() {
-    /* var $name = $('#first-name').val();
-    var $lastName = $('#last-name').val() ;
-    var mail =  $('#email').val();*/
-    /* se ejecuta si se cumple todos los campos*/
     if ($('#check').prop('checked') && $('#first-name').val() && $('#last-name').val() && $('#email').val()) {
       event.preventDefault();
       /* se dirige a la vista end*/
