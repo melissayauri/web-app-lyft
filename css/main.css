@@ -66,31 +66,35 @@ img[alt="logo-pink"]{
   display: flex;
   justify-content: center;
 }
-/* fin de la vista*/
+
 .btn-start{
   background-color: #e40b8d;
   margin-right: 2rem;
   color:white;
   padding: 2rem 3rem 1rem 3rem;
 }
+/* fin de la vista*/
 
 /*vista sign-up*/
 /*menú*/
-.title-sign{
-  margin-left: 18rem;
-}
-.sign-up{
-  background: linear-gradient(650deg,#b2077b,#530060);
+.sign-up {
+  background: radial-gradient(circle,#b2077b,#530060);
   color:white;
+  text-align: center;
 }
+
+.margin{
+  margin-right: 5rem;
+}
+img[alt="flag"]{
+  width: 30px;
+}
+
 .return{
   color:#b2077b;
   font-size: 4rem;
 }
-img[alt="flag"]{
-  width: 30px;
 
-}
 /*boton de las banderas*/
 .btn-flag{
   margin-bottom: 5px;
@@ -110,10 +114,7 @@ img[alt="flag"]{
   font-weight: 900;
   color:white;
 }
-/*codigo postal*/
-.code-postal{
-  width: 30%;
-}
+
 /*entrada para el numero de telefono*/
 .number-phone{
   display: inline-block;
@@ -139,6 +140,7 @@ img[alt="flag"]{
 .disabled-color{
   background-color: #CDCDCE;
 }
+
 
 .title-verify{
   margin-left: 9rem;
@@ -194,12 +196,27 @@ img[alt="logo-final"]{
   .btn-start{
     margin-right: 6rem;
   }
+  .margin{
+    margin-right: 0rem;
+    margin-left: 20em;
+  }
+  .margin-text{
+    margin-left: 40em;
+  }
+
+
+
+
+
+
 
   .btn-resent{
   margin-left: 32rem;
   }
   .title-sign{
-    margin-left: 35rem;
+    text-align: right;
+    margin-right: 0rem;
+    margin-left: 10rem;
   }
   .center{
     margin-left: 32rem;
@@ -211,9 +228,11 @@ img[alt="logo-final"]{
   .number-phone{
     width: 50%;
   }
+  /*
   .title-verify{
     margin-left: 30rem;
   }
+  */
   .text-verify{
     margin-left: 8rem;
   }
