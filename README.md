@@ -1,48 +1,52 @@
-# Reto L Y F T
+# Challenge L Y F T
 
-## Objetivo
-Desarrollar una web-app que replique el sitio de Lyft
+## Objective
+Develop a web app that replicates the Lyft site.
 
-## Herramientas
+## Tools
 
 * HTML
 * CSS
 * Framework bootstrap
 * Jquery
 
-## Flujo de la aplicación
-1. Vista splash: Esta vista estás disponible por 4 segundos
+## Flow of the application
+1. Splash view: This view is available for 4 seconds.
 
-![splash](assets/images/vista-splash.JPG)
+  ![splash](assets/images/splash1.PNG)
 
-2. Vista principal:Esta vista tiene un botón que te permite inscribirte a la plataforma
+2. Main view: This view has a button `sign up` that allows you to register to the platform.
 
-![splash](assets/images/vista-principal.JPG)
+ ![main](assets/images/main.PNG)
 
-3. Vista sign-up: Permite inscribirte con un número telefónico con un selector de paises
+3. Sign-up view: It allows you to register with a telephone number with a country selector.
 
-![splash](assets/images/vista-sign.JPG)
+ - When you select the country, the postal code is showed and you can write a phone number
+  ![sign](assets/images/sogn1.PNG)
 
-Asimismo consta de un selector para elegir el codigo postal del país.Para ello se adiciono un mensaje para guiar al cliente sobre el código postal.
+ - When you write your phone number, the "next" button is enabled to  go to the other view
+![sign](assets/images/sign2.PNG)
 
-![splash](assets/images/vista-mensaje.JPG)
+ - By clicking to the "next" button, the platform will give you a random code
 
-Luego de que se introduzca el n° telefonico, el botón next se habilita y te brinda un codigo.
+    ![sign](assets/images/alert.PNG)
 
-![splash](assets/images/vista-code.JPG)
+4. Verify view: It allows you to enter the code generated previously but in case the client forgets, you can request another code with the resent button.
 
-4. Vista verify: Te permite introducir el codigo generado anteriormente pero si en caso el cliente se olvida puede solicitar otro codigo con el botón resent.
+ ![splash](assets/images/verify.PNG)
 
-![splash](assets/images/vista-verify.JPG)
+5. Form view: This view allows you to register your name, last name and email.
 
-5. Vista formul: Esta vista te permite registrar tus nombre, apellido y correo.
+ ![splash](assets/images/formul.PNG)
 
-![splash](assets/images/vista-formul.JPG)
+6. End view: It is the view where indicates that everything was successfully concluded.
+
+ ![splash](assets/images/end.PNG)
 
 6. Vista-final: Es la vista donde indica que todo se concluyo exitosamente
 
 ![splash](assets/images/vista-final.JPG)
 
-## Fuentes
+## Bibliographical sources
 
 * [expresiones regulares jquery](https://www.solvetic.com/tutoriales/article/1473-expresiones-regulares-con-jquery/)
