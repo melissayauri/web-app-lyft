@@ -1,6 +1,5 @@
-# Challenge L Y F T
+# L Y F T
 
-## Objective
 Develop a web app that replicates the Lyft site.
 
 ## Tools
