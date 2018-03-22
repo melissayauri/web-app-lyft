@@ -1,6 +1,7 @@
 # L Y F T
-
 Develop a web app that replicates the Lyft site.
+
+![image](https://user-images.githubusercontent.com/32289930/37803313-11595504-2dfc-11e8-9304-be1a18fd167a.png)
 
 ## Tools
 
