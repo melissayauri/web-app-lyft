@@ -4,7 +4,8 @@ It is a platform that allows you to register as a driver in Lyft through a verif
 
 ![image](https://user-images.githubusercontent.com/32289930/37803614-d5045a84-2dfd-11e8-8429-2655c8d4e704.png)
 
-## Desarrollado para [Laboratoria](http://laboratoria.la)
+## Desarrollado para
+[Laboratoria](http://laboratoria.la)
 
 ## Tools
 
