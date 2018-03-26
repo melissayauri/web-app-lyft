@@ -1,6 +1,6 @@
 # L Y F T
 
-**Cardify** es un plugin de jQuery, flexbox y responsive. Dado un _contenedor de imágenes_, Cardify envuelve cada una de ellas en un nuevo elemento `<figure>` y añade un `<figcaption>` con el texto del atributo `alt` de la imagen.
+Develop a web app that replicates the Lyft site.
 
 ![image](https://user-images.githubusercontent.com/32289930/37803614-d5045a84-2dfd-11e8-8429-2655c8d4e704.png)
 
