@@ -4,7 +4,7 @@ It is a platform that allows you to register as a driver in Lyft through your ce
 
 ![image](https://user-images.githubusercontent.com/32289930/37803614-d5045a84-2dfd-11e8-8429-2655c8d4e704.png)
 
-## Desarrollado para
+## Developed for
 [Laboratoria](http://laboratoria.la)
 
 ## Tools
